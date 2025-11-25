@@ -1,0 +1,62 @@
+name: paradetox-env
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.13
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - regex
+  - sentencepiece
+  - tqdm
+  - certifi
+  - charset-normalizer
+  - requests
+  - pillow
+  - matplotlib
+  - pynacl
+  - tk
+  - zlib
+  - libxml2
+  - lz4-c
+  - yaml-cpp
+  - icu
+  - openssl
+  - libffi
+  - bzip2
+  - sqlite
+  - ca-certificates
+
+  - pip:
+      # --- Core ML stack (from your list) ---
+      - torch==2.9.0
+      - transformers==4.57.1
+      - tokenizers==0.22.1
+      - safetensors==0.6.2
+      - huggingface-hub==0.36.0
+
+      # --- SentenceTransformer (needed for SIM metric) ---
+      - sentence-transformers==2.6.1
+
+      # --- Metrics ---
+      - sacrebleu
+      - scikit-learn
+      - evaluate
+      - datasets
+
+      # --- TinyStyler dependencies ---
+      - tiktoken==0.5.2
+      - accelerate
+      - protobuf==4.25.0
+
+      # --- Utilities ---
+      - python-dateutil
+      - rich
+      - httpx
+      - filelock
+      - pyyaml
+      - tqdm
+      - fsspec
