@@ -1,0 +1,6 @@
+=== ParaDetox-style Metrics ===
+BLEU:  21.16
+STA :  0.315
+SIM :  0.788
+FL  :  0.669
+J   :  0.166
