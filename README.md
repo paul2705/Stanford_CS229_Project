@@ -4,7 +4,7 @@
 
 This training script fine-tunes a sequence-to-sequence model (BART, T5, etc.) for toxic-text detoxification using data formatted in the ParaDetox style. The script performs efficient data preprocessing, model training, prediction generation, and evaluation.
 
-To train the model, follow the below steps in the project root folder:
+To train the model, follow the steps below in the project root folder:
 
 ### Installation
 1. Create the Conda Environment:
@@ -16,14 +16,14 @@ conda env create -f env.yml
 conda activate bart_detox
 ```
 
-### TRAIN Dataset Format (TSV)
+### Train Dataset Format (TSV)
 Ensure the input file for training (default: /TRAIN/paradetox.tsv) is a Tab-Separated Values (TSV) file with the following columns: ``toxic, neutral1, neutral2, neutral3``
 
-[!NOTE]
-Contents in ``neutral2`` and ``neutral3`` are optional but recommended for data augmentation.
+**Note:**
 
-[!NOTE]
-Short/empty examples are automatically filtered.
+1. Contents in ``neutral2`` and ``neutral3`` are optional but recommended for data augmentation.
+
+2. Short/empty examples are automatically filtered.
 
 ### Usage
 
@@ -46,7 +46,6 @@ python TRAIN/train_detox.py \
 ```
 
 #### Arguments
-## Arguments
 
 | Argument       | Default                 | Description                                                           |
 | -------------- | ----------------------- | --------------------------------------------------------------------- |
