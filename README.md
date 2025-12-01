@@ -69,6 +69,10 @@ Predictions: Saved to ``[OUTPUT_DIR]/test_results.tsv``
 
 Metrics: Saved to ``[OUTPUT_DIR]/metrics.txt``
 
+### Training Results
+
+The evaluation metrics for all the models we tested are saved in ``TRAIN/summary_metrics.csv`` and sorted by ``J``.
+
 ## Evaluate Metrics
 
 python version: Python 3.13.5
