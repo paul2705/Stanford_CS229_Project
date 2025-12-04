@@ -4,3 +4,23 @@ __pycache__/
 *.pt
 model.safetensors
 .DS_Store
+
+
+# Local IDE config
+.vscode/
+
+# Large RLHF outputs
+RL/full_run/
+RL/full_run_jonly/
+
+# Local TRAIN artifacts not meant for version control
+TRAIN/bart-large/
+TRAIN/bart-paraphrase/
+TRAIN/blenderbot/
+TRAIN/distilbart/
+TRAIN/flan-t5-base/
+TRAIN/mvp/
+TRAIN/prophetnet-large-uncased/
+TRAIN/pure-t5-base/
+TRAIN/t5-small/
+
