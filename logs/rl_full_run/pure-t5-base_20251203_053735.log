@@ -1,0 +1,27 @@
+Some weights of the model checkpoint at SkolkovoInstitute/roberta_toxicity_classifier were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at textattack/roberta-base-CoLA were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Using device: mps
+Loading policy initialization from TRAIN/pure-t5-base/final_model
+Epoch 1/10
+Traceback (most recent call last):
+  File "/Users/shatongzhu/Documents/GitHub/Stanford_CS229_Project/RL/train.py", line 892, in <module>
+    main()
+  File "/Users/shatongzhu/Documents/GitHub/Stanford_CS229_Project/RL/train.py", line 851, in main
+    training_history, evaluation_history = run_ppo_training(
+  File "/Users/shatongzhu/Documents/GitHub/Stanford_CS229_Project/RL/train.py", line 668, in run_ppo_training
+    stats = ppo_single_step(
+  File "/Users/shatongzhu/Documents/GitHub/Stanford_CS229_Project/RL/train.py", line 477, in ppo_single_step
+    response_ids = policy_model.generate(
+  File "/opt/anaconda3/envs/bart_detox/lib/python3.10/site-packages/trl/models/modeling_value_head.py", line 435, in generate
+    return self.pretrained_model.generate(*args, **kwargs)
+  File "/opt/anaconda3/envs/bart_detox/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/anaconda3/envs/bart_detox/lib/python3.10/site-packages/transformers/generation/utils.py", line 2564, in generate
+    result = decoding_method(
+  File "/opt/anaconda3/envs/bart_detox/lib/python3.10/site-packages/transformers/generation/utils.py", line 2829, in _sample
+    next_tokens = torch.multinomial(probs, num_samples=1).squeeze(1)
+RuntimeError: probability tensor contains either `inf`, `nan` or element < 0
