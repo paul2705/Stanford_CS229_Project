@@ -1,0 +1,559 @@
+Some weights of the model checkpoint at SkolkovoInstitute/roberta_toxicity_classifier were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at textattack/roberta-base-CoLA were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Using device: mps
+Loading policy initialization from TRAIN/mvp/final_model
+Epoch 1/10
+  Step 01: reward=0.1294 loss=2.7985 kl=-0.1776
+  Step 02: reward=0.1225 loss=2.2604 kl=-1.7023
+  Step 03: reward=0.1233 loss=1.9457 kl=-1.0893
+  Step 04: reward=0.1297 loss=1.2992 kl=-0.5166
+  Step 05: reward=0.1238 loss=0.9050 kl=-0.4924
+  Step 06: reward=0.1226 loss=1.5972 kl=0.1845
+  Step 07: reward=0.1263 loss=74.3854 kl=-1.4345
+  Step 08: reward=0.1323 loss=1.0455 kl=-0.6074
+  Step 09: reward=0.1244 loss=3.8393 kl=-1.1241
+  Step 10: reward=0.1280 loss=2.5180 kl=-1.0293
+  Step 11: reward=0.1287 loss=11.5934 kl=-1.2233
+  Step 12: reward=0.1782 loss=2.0885 kl=1.1761
+  Step 13: reward=0.1275 loss=1.3422 kl=0.5667
+  Step 14: reward=0.1286 loss=8.8121 kl=-0.9734
+  Step 15: reward=0.1226 loss=3.8741 kl=-0.5245
+  Step 16: reward=0.1295 loss=1.3866 kl=-0.4776
+  Step 17: reward=0.1241 loss=0.8122 kl=0.0393
+  Step 18: reward=0.1201 loss=1.2074 kl=0.7369
+  Step 19: reward=0.1225 loss=1.9652 kl=-0.7004
+  Step 20: reward=0.1199 loss=4.0657 kl=-1.7438
+  Step 21: reward=0.1266 loss=4.0301 kl=1.1026
+  Step 22: reward=0.1264 loss=3.4701 kl=-1.1037
+  Step 23: reward=0.1283 loss=0.5947 kl=-0.1706
+  Step 24: reward=0.1225 loss=1.5054 kl=-0.5388
+  Step 25: reward=0.1637 loss=3.8476 kl=1.5979
+  Step 26: reward=0.1293 loss=0.3559 kl=0.0743
+  Step 27: reward=0.1265 loss=1.7536 kl=-0.4778
+  Step 28: reward=0.1200 loss=2.2317 kl=-0.5032
+  Step 29: reward=0.1505 loss=1.1092 kl=0.8503
+  Step 30: reward=0.1298 loss=1.0002 kl=-0.4114
+  Step 31: reward=0.1304 loss=2.3493 kl=-0.9593
+  Step 32: reward=0.1372 loss=1.0078 kl=-0.1832
+  Step 33: reward=0.1205 loss=0.7405 kl=-0.1009
+  Step 34: reward=0.1256 loss=5.1928 kl=1.7133
+  Step 35: reward=0.1221 loss=1.0461 kl=0.5348
+  Step 36: reward=0.1271 loss=2.7634 kl=2.0402
+  Step 37: reward=0.1202 loss=3.4333 kl=-0.4107
+  Step 38: reward=0.1238 loss=4.0134 kl=2.6459
+  Step 39: reward=0.1225 loss=0.5783 kl=-0.2426
+  Step 40: reward=0.1378 loss=2.6170 kl=0.5531
+  Step 41: reward=0.1559 loss=0.6987 kl=0.2352
+  Step 42: reward=0.1281 loss=3.1770 kl=0.6837
+  Step 43: reward=0.1222 loss=0.9589 kl=0.4540
+  Step 44: reward=0.1176 loss=0.9305 kl=0.0397
+  Step 45: reward=0.1174 loss=18.2521 kl=0.0236
+  Step 46: reward=0.1250 loss=1.5977 kl=0.1984
+  Step 47: reward=0.1222 loss=1.6568 kl=1.3249
+  Step 48: reward=0.1396 loss=3.9475 kl=3.6425
+  Step 49: reward=0.1246 loss=3.2114 kl=2.6410
+  Step 50: reward=0.1256 loss=1.5411 kl=1.1480
+  Eval reward=0.6093 toxicity=0.0778
+Epoch 2/10
+  Step 01: reward=0.1751 loss=1.1079 kl=0.5802
+  Step 02: reward=0.1243 loss=4.4610 kl=4.0097
+  Step 03: reward=0.1245 loss=1.6105 kl=0.7839
+  Step 04: reward=0.1257 loss=0.5048 kl=-0.0516
+  Step 05: reward=0.1634 loss=1.6295 kl=0.6411
+  Step 06: reward=0.1141 loss=1.2210 kl=0.8706
+  Step 07: reward=0.1615 loss=0.5267 kl=0.2032
+  Step 08: reward=0.1263 loss=7.3969 kl=0.2458
+  Step 09: reward=0.1496 loss=2.7634 kl=1.6887
+  Step 10: reward=0.1562 loss=1.9471 kl=-0.5953
+  Step 11: reward=0.1226 loss=1.4128 kl=-0.3153
+  Step 12: reward=0.1265 loss=1.9299 kl=0.8747
+  Step 13: reward=0.1234 loss=5.0759 kl=-0.6427
+  Step 14: reward=0.1213 loss=2.8221 kl=-0.9079
+  Step 15: reward=0.1263 loss=12.3882 kl=-0.2282
+  Step 16: reward=0.1277 loss=1.0488 kl=-0.5268
+  Step 17: reward=0.1211 loss=3.0347 kl=1.8511
+  Step 18: reward=0.1297 loss=0.7459 kl=-0.3435
+  Step 19: reward=0.1261 loss=8.3924 kl=-0.7825
+  Step 20: reward=0.1229 loss=0.7242 kl=-0.1195
+  Step 21: reward=0.1244 loss=1.4277 kl=0.3006
+  Step 22: reward=0.1269 loss=1.1556 kl=0.8016
+  Step 23: reward=0.1234 loss=0.7086 kl=-0.4299
+  Step 24: reward=0.1218 loss=2.3893 kl=2.0872
+  Step 25: reward=0.1246 loss=1.3125 kl=1.0347
+  Step 26: reward=0.1221 loss=1.1578 kl=0.5849
+  Step 27: reward=0.1317 loss=0.3704 kl=-0.0558
+  Step 28: reward=0.1288 loss=0.6275 kl=0.1022
+  Step 29: reward=0.1231 loss=1.6911 kl=1.3708
+  Step 30: reward=0.1159 loss=0.5841 kl=-0.1208
+  Step 31: reward=0.1212 loss=0.7450 kl=0.4707
+  Step 32: reward=0.1311 loss=6.8306 kl=-0.6245
+  Step 33: reward=0.1125 loss=3.7079 kl=2.0218
+  Step 34: reward=0.1262 loss=0.9936 kl=-0.2268
+  Step 35: reward=0.1273 loss=1.1157 kl=0.6700
+  Step 36: reward=0.1213 loss=1.0976 kl=0.6661
+  Step 37: reward=0.1274 loss=1.1531 kl=0.4247
+  Step 38: reward=0.1189 loss=1.3954 kl=0.4191
+  Step 39: reward=0.1214 loss=2.7430 kl=2.3424
+  Step 40: reward=0.1584 loss=0.6390 kl=-0.3596
+  Step 41: reward=0.1288 loss=10.2004 kl=-0.2735
+  Step 42: reward=0.1276 loss=4.2556 kl=-0.1455
+  Step 43: reward=0.1249 loss=0.4938 kl=0.1341
+  Step 44: reward=0.1199 loss=0.5090 kl=0.2148
+  Step 45: reward=0.1197 loss=1.0738 kl=-0.1538
+  Step 46: reward=0.1222 loss=1.9610 kl=1.3479
+  Step 47: reward=0.1605 loss=2.9243 kl=2.6897
+  Step 48: reward=0.1220 loss=3.0275 kl=-0.2203
+  Step 49: reward=0.1291 loss=1.9638 kl=1.6035
+  Step 50: reward=0.1187 loss=1.5790 kl=-0.2482
+  Eval reward=0.6150 toxicity=0.0788
+Epoch 3/10
+  Step 01: reward=0.1249 loss=1.1577 kl=0.6737
+  Step 02: reward=0.1168 loss=1.2506 kl=0.4561
+  Step 03: reward=0.1296 loss=1.0241 kl=0.4664
+  Step 04: reward=0.1252 loss=1.6985 kl=0.6967
+  Step 05: reward=0.1214 loss=0.8824 kl=0.1957
+  Step 06: reward=0.1263 loss=3.4570 kl=0.9761
+  Step 07: reward=0.1305 loss=0.6846 kl=0.2518
+  Step 08: reward=0.1271 loss=1.4584 kl=-0.1859
+  Step 09: reward=0.1456 loss=1.4860 kl=1.0494
+  Step 10: reward=0.1267 loss=2.6408 kl=0.5313
+  Step 11: reward=0.1256 loss=1.2198 kl=-0.4670
+  Step 12: reward=0.1174 loss=1.3669 kl=0.7646
+  Step 13: reward=0.1264 loss=1.1140 kl=0.5385
+  Step 14: reward=0.1327 loss=0.6052 kl=-0.2459
+  Step 15: reward=0.1231 loss=0.7566 kl=-0.0470
+  Step 16: reward=0.1256 loss=1.0999 kl=-0.2566
+  Step 17: reward=0.1251 loss=0.7056 kl=0.0976
+  Step 18: reward=0.1199 loss=0.6339 kl=0.1769
+  Step 19: reward=0.1256 loss=1.2296 kl=0.8867
+  Step 20: reward=0.1322 loss=3.1091 kl=1.2787
+  Step 21: reward=0.1199 loss=8.6092 kl=1.3110
+  Step 22: reward=0.1198 loss=2.6956 kl=1.7994
+  Step 23: reward=0.1401 loss=1.1744 kl=0.1939
+  Step 24: reward=0.1227 loss=8.0884 kl=7.7089
+  Step 25: reward=0.1249 loss=1.7819 kl=1.0195
+  Step 26: reward=0.1294 loss=3.9540 kl=3.0932
+  Step 27: reward=0.1391 loss=2.0855 kl=0.7060
+  Step 28: reward=0.1263 loss=0.6885 kl=-0.3824
+  Step 29: reward=0.1263 loss=0.5328 kl=-0.2540
+  Step 30: reward=0.1255 loss=3.4418 kl=2.0696
+  Step 31: reward=0.1135 loss=1.5807 kl=1.0224
+  Step 32: reward=0.1246 loss=1.2814 kl=0.2306
+  Step 33: reward=0.1242 loss=1.0160 kl=0.3167
+  Step 34: reward=0.1221 loss=1.6738 kl=0.9168
+  Step 35: reward=0.1260 loss=4.9647 kl=4.4322
+  Step 36: reward=0.1290 loss=3.4413 kl=2.6325
+  Step 37: reward=0.1252 loss=7.6453 kl=1.0239
+  Step 38: reward=0.1463 loss=1.3192 kl=0.8050
+  Step 39: reward=0.1328 loss=2.5867 kl=-0.9455
+  Step 40: reward=0.1221 loss=0.8623 kl=0.2716
+  Step 41: reward=0.1318 loss=1.1667 kl=0.7608
+  Step 42: reward=0.1392 loss=1.4176 kl=0.9727
+  Step 43: reward=0.1250 loss=8.7858 kl=1.2687
+  Step 44: reward=0.1198 loss=1.2388 kl=-0.0903
+  Step 45: reward=0.1303 loss=1.7154 kl=1.4601
+  Step 46: reward=0.1211 loss=4.9784 kl=3.7831
+  Step 47: reward=0.1229 loss=12.8395 kl=0.9611
+  Step 48: reward=0.1233 loss=4.5571 kl=4.0984
+  Step 49: reward=0.1286 loss=1.1495 kl=0.7905
+  Step 50: reward=0.1301 loss=2.1803 kl=1.7161
+  Eval reward=0.6146 toxicity=0.0843
+Epoch 4/10
+  Step 01: reward=0.1287 loss=1.1337 kl=0.4818
+  Step 02: reward=0.1201 loss=5.0430 kl=3.4745
+  Step 03: reward=0.1266 loss=1.3079 kl=0.3302
+  Step 04: reward=0.1240 loss=5.2181 kl=1.7616
+  Step 05: reward=0.1309 loss=2.7721 kl=2.3611
+  Step 06: reward=0.1217 loss=0.5212 kl=0.2466
+  Step 07: reward=0.1233 loss=3.8200 kl=2.9014
+  Step 08: reward=0.1307 loss=6.0697 kl=5.2501
+  Step 09: reward=0.1296 loss=1.8028 kl=0.7144
+  Step 10: reward=0.1593 loss=2.2199 kl=1.8849
+  Step 11: reward=0.1194 loss=0.5297 kl=0.2994
+  Step 12: reward=0.1192 loss=2.7191 kl=1.5187
+  Step 13: reward=0.1144 loss=1.1162 kl=0.4716
+  Step 14: reward=0.1456 loss=1.5893 kl=0.6694
+  Step 15: reward=0.1270 loss=1.6652 kl=-0.2477
+  Step 16: reward=0.1266 loss=0.7720 kl=0.1405
+  Step 17: reward=0.1257 loss=0.9927 kl=0.5401
+  Step 18: reward=0.1091 loss=4.8708 kl=1.2332
+  Step 19: reward=0.1239 loss=1.4419 kl=0.7536
+  Step 20: reward=0.1164 loss=2.3865 kl=1.9219
+  Step 21: reward=0.1437 loss=0.5575 kl=0.1149
+  Step 22: reward=0.1259 loss=2.1611 kl=1.1586
+  Step 23: reward=0.1298 loss=1.5549 kl=1.0981
+  Step 24: reward=0.1176 loss=1.4852 kl=-0.4817
+  Step 25: reward=0.1291 loss=1.6929 kl=-0.6679
+  Step 26: reward=0.1255 loss=0.4819 kl=0.0938
+  Step 27: reward=0.1246 loss=2.3972 kl=1.8155
+  Step 28: reward=0.1263 loss=0.5200 kl=-0.1104
+  Step 29: reward=0.1176 loss=0.5213 kl=-0.0361
+  Step 30: reward=0.1278 loss=1.1414 kl=0.7460
+  Step 31: reward=0.1255 loss=1.6943 kl=1.1261
+  Step 32: reward=0.1256 loss=2.8802 kl=2.3639
+  Step 33: reward=0.1273 loss=0.6060 kl=-0.1423
+  Step 34: reward=0.1321 loss=1.0592 kl=-0.4930
+  Step 35: reward=0.1285 loss=0.9621 kl=-0.2944
+  Step 36: reward=0.1287 loss=1.2290 kl=0.7035
+  Step 37: reward=0.1176 loss=3.1761 kl=2.5811
+  Step 38: reward=0.1281 loss=2.3009 kl=1.6963
+  Step 39: reward=0.1296 loss=1.8979 kl=1.5443
+  Step 40: reward=0.1631 loss=2.9970 kl=2.2305
+  Step 41: reward=0.1268 loss=2.3894 kl=0.9247
+  Step 42: reward=0.1259 loss=1.8923 kl=0.8530
+  Step 43: reward=0.1173 loss=3.0233 kl=2.4412
+  Step 44: reward=0.1244 loss=1.5122 kl=0.6763
+  Step 45: reward=0.1252 loss=2.9541 kl=2.0683
+  Step 46: reward=0.1270 loss=3.5437 kl=1.2251
+  Step 47: reward=0.1263 loss=2.7835 kl=2.2645
+  Step 48: reward=0.1211 loss=6.6833 kl=1.1281
+  Step 49: reward=0.1165 loss=0.9107 kl=0.4319
+  Step 50: reward=0.1267 loss=1.4288 kl=0.8217
+  Eval reward=0.6157 toxicity=0.0877
+Epoch 5/10
+  Step 01: reward=0.1250 loss=1.9175 kl=1.4378
+  Step 02: reward=0.1255 loss=3.2401 kl=1.2054
+  Step 03: reward=0.1175 loss=2.3847 kl=0.5247
+  Step 04: reward=0.1217 loss=3.6666 kl=3.1670
+  Step 05: reward=0.1185 loss=1.6281 kl=0.0497
+  Step 06: reward=0.1194 loss=1.9290 kl=0.6145
+  Step 07: reward=0.1303 loss=7.7309 kl=0.6222
+  Step 08: reward=0.1181 loss=2.5999 kl=2.1195
+  Step 09: reward=0.1250 loss=1.8144 kl=0.7887
+  Step 10: reward=0.1316 loss=2.6744 kl=1.7340
+  Step 11: reward=0.1275 loss=2.9977 kl=2.3634
+  Step 12: reward=0.1257 loss=3.1348 kl=1.8924
+  Step 13: reward=0.1625 loss=1.9511 kl=1.2161
+  Step 14: reward=0.1153 loss=1.2715 kl=0.3004
+  Step 15: reward=0.1183 loss=1.2802 kl=0.8108
+  Step 16: reward=0.1255 loss=2.0425 kl=0.5288
+  Step 17: reward=0.1273 loss=1.0142 kl=0.4293
+  Step 18: reward=0.1230 loss=1.2085 kl=0.2388
+  Step 19: reward=0.1236 loss=2.6837 kl=2.0829
+  Step 20: reward=0.1285 loss=1.5511 kl=1.0028
+  Step 21: reward=0.1244 loss=2.5932 kl=2.1181
+  Step 22: reward=0.1207 loss=44.7926 kl=-0.2289
+  Step 23: reward=0.1301 loss=2.5568 kl=1.6641
+  Step 24: reward=0.1176 loss=1.7739 kl=1.4346
+  Step 25: reward=0.1250 loss=2.1430 kl=0.2067
+  Step 26: reward=0.1269 loss=137.2610 kl=-0.0491
+  Step 27: reward=0.1260 loss=4.2046 kl=0.6654
+  Step 28: reward=0.1217 loss=5.0092 kl=3.3659
+  Step 29: reward=0.1252 loss=14.3186 kl=1.6932
+  Step 30: reward=0.1260 loss=5.1494 kl=4.5672
+  Step 31: reward=0.1218 loss=3.1005 kl=2.3134
+  Step 32: reward=0.1240 loss=1.8365 kl=1.3820
+  Step 33: reward=0.1202 loss=1.9891 kl=0.8821
+  Step 34: reward=0.1257 loss=3.5995 kl=2.7609
+  Step 35: reward=0.1365 loss=2.0511 kl=1.7100
+  Step 36: reward=0.1147 loss=2.0368 kl=0.9225
+  Step 37: reward=0.1239 loss=3.9136 kl=3.0648
+  Step 38: reward=0.1170 loss=8.1551 kl=0.8985
+  Step 39: reward=0.1221 loss=1.5240 kl=0.9792
+  Step 40: reward=0.1233 loss=2.4668 kl=1.9014
+  Step 41: reward=0.1296 loss=4.0392 kl=1.8954
+  Step 42: reward=0.1304 loss=3.5037 kl=2.9627
+  Step 43: reward=0.1299 loss=57.4401 kl=0.9545
+  Step 44: reward=0.1243 loss=2.6144 kl=1.8847
+  Step 45: reward=0.1203 loss=3.6991 kl=2.7612
+  Step 46: reward=0.1187 loss=3.0163 kl=2.5426
+  Step 47: reward=0.1323 loss=0.9120 kl=0.3267
+  Step 48: reward=0.1258 loss=1.6640 kl=1.1469
+  Step 49: reward=0.1220 loss=65.9829 kl=2.3604
+  Step 50: reward=0.1312 loss=2.2531 kl=1.5057
+  Eval reward=0.6184 toxicity=0.0684
+Epoch 6/10
+  Step 01: reward=0.1251 loss=1.2575 kl=0.6703
+  Step 02: reward=0.1239 loss=114.1335 kl=0.7717
+  Step 03: reward=0.1317 loss=0.9574 kl=0.4089
+  Step 04: reward=0.1268 loss=2.4941 kl=1.8484
+  Step 05: reward=0.1227 loss=4.8974 kl=-0.3588
+  Step 06: reward=0.1183 loss=1.4069 kl=1.0824
+  Step 07: reward=0.1289 loss=10.6380 kl=0.0554
+  Step 08: reward=0.1234 loss=2.1190 kl=1.5988
+  Step 09: reward=0.1285 loss=0.8845 kl=0.4453
+  Step 10: reward=0.1251 loss=1.8483 kl=1.2980
+  Step 11: reward=0.1382 loss=1.9617 kl=1.6172
+  Step 12: reward=0.1251 loss=1.0348 kl=0.2943
+  Step 13: reward=0.1134 loss=2.4826 kl=0.9560
+  Step 14: reward=0.1294 loss=1.4064 kl=0.8954
+  Step 15: reward=0.1178 loss=1.4124 kl=0.7989
+  Step 16: reward=0.1267 loss=1.6166 kl=0.9371
+  Step 17: reward=0.1274 loss=510.6899 kl=1.0629
+  Step 18: reward=0.1197 loss=1.8541 kl=-0.5525
+  Step 19: reward=0.1206 loss=2.1566 kl=1.6696
+  Step 20: reward=0.1237 loss=3.3138 kl=2.6731
+  Step 21: reward=0.1240 loss=0.5262 kl=0.0331
+  Step 22: reward=0.1229 loss=0.8193 kl=-0.1399
+  Step 23: reward=0.1177 loss=58.3284 kl=1.1407
+  Step 24: reward=0.1162 loss=1.8532 kl=1.4465
+  Step 25: reward=0.1184 loss=2.2894 kl=1.5155
+  Step 26: reward=0.1266 loss=2.5200 kl=1.7205
+  Step 27: reward=0.1262 loss=2.5230 kl=0.5664
+  Step 28: reward=0.1226 loss=13.6777 kl=0.9693
+  Step 29: reward=0.1265 loss=1.8117 kl=1.3430
+  Step 30: reward=0.1386 loss=0.8841 kl=0.3829
+  Step 31: reward=0.1250 loss=848.4316 kl=0.9902
+  Step 32: reward=0.1279 loss=2.4780 kl=1.6127
+  Step 33: reward=0.1211 loss=58.8187 kl=1.0463
+  Step 34: reward=0.1288 loss=2.1187 kl=1.1668
+  Step 35: reward=0.1248 loss=15.1344 kl=1.3003
+  Step 36: reward=0.1224 loss=2.8720 kl=2.0537
+  Step 37: reward=0.1312 loss=1.7131 kl=1.2114
+  Step 38: reward=0.1253 loss=3.1579 kl=2.0567
+  Step 39: reward=0.1278 loss=3.8960 kl=2.5061
+  Step 40: reward=0.1344 loss=2.0320 kl=1.4687
+  Step 41: reward=0.1252 loss=2.2148 kl=1.9434
+  Step 42: reward=0.1260 loss=23.3589 kl=0.5932
+  Step 43: reward=0.1295 loss=0.9752 kl=0.0903
+  Step 44: reward=0.1414 loss=14.7946 kl=0.0286
+  Step 45: reward=0.1250 loss=17.7903 kl=0.7031
+  Step 46: reward=0.1222 loss=3.5339 kl=-0.5968
+  Step 47: reward=0.1241 loss=2.2559 kl=0.9587
+  Step 48: reward=0.1264 loss=1.2704 kl=0.6058
+  Step 49: reward=0.1384 loss=1.8667 kl=-0.5121
+  Step 50: reward=0.1277 loss=46.1890 kl=-0.4775
+  Eval reward=0.6159 toxicity=0.0917
+Epoch 7/10
+  Step 01: reward=0.1312 loss=1.4418 kl=0.4463
+  Step 02: reward=0.1302 loss=2.8101 kl=-0.4551
+  Step 03: reward=0.1285 loss=1.2065 kl=-0.2906
+  Step 04: reward=0.1334 loss=3.7203 kl=-0.7681
+  Step 05: reward=0.1271 loss=3.1615 kl=-0.4304
+  Step 06: reward=0.1301 loss=1.4873 kl=0.6148
+  Step 07: reward=0.1202 loss=1.9470 kl=0.1449
+  Step 08: reward=0.1230 loss=0.9669 kl=0.3955
+  Step 09: reward=0.1269 loss=1.1269 kl=0.1484
+  Step 10: reward=0.1298 loss=0.8105 kl=-0.0385
+  Step 11: reward=0.1155 loss=1.4174 kl=0.7402
+  Step 12: reward=0.1324 loss=0.6448 kl=0.0909
+  Step 13: reward=0.1184 loss=1.5703 kl=0.7702
+  Step 14: reward=0.1339 loss=0.5134 kl=0.0400
+  Step 15: reward=0.1214 loss=2.4499 kl=1.9153
+  Step 16: reward=0.1210 loss=1.2286 kl=0.5533
+  Step 17: reward=0.1161 loss=2.0396 kl=1.6553
+  Step 18: reward=0.1248 loss=0.7343 kl=0.0725
+  Step 19: reward=0.1181 loss=1.2721 kl=0.8682
+  Step 20: reward=0.1259 loss=1.8967 kl=0.0795
+  Step 21: reward=0.1206 loss=5.1610 kl=-0.0313
+  Step 22: reward=0.1204 loss=0.7877 kl=0.0549
+  Step 23: reward=0.1289 loss=0.9277 kl=0.2065
+  Step 24: reward=0.1276 loss=1.2008 kl=0.9903
+  Step 25: reward=0.1158 loss=0.7370 kl=0.3857
+  Step 26: reward=0.1234 loss=1.1189 kl=0.2942
+  Step 27: reward=0.1202 loss=2.1482 kl=1.3518
+  Step 28: reward=0.1249 loss=1.4944 kl=0.7379
+  Step 29: reward=0.1305 loss=6.5730 kl=-0.3803
+  Step 30: reward=0.1192 loss=1.8671 kl=1.3842
+  Step 31: reward=0.1269 loss=0.4444 kl=0.0465
+  Step 32: reward=0.1301 loss=1.4766 kl=-0.8019
+  Step 33: reward=0.1277 loss=0.8258 kl=0.3502
+  Step 34: reward=0.1246 loss=1.4606 kl=0.1822
+  Step 35: reward=0.1287 loss=5753.4058 kl=-0.7498
+  Step 36: reward=0.1189 loss=6.4476 kl=-0.4635
+  Step 37: reward=0.1463 loss=0.8764 kl=0.2249
+  Step 38: reward=0.1281 loss=1.1555 kl=0.7542
+  Step 39: reward=0.1225 loss=0.8225 kl=0.3996
+  Step 40: reward=0.1298 loss=1.9909 kl=1.1051
+  Step 41: reward=0.1211 loss=2.1925 kl=0.3681
+  Step 42: reward=0.1222 loss=2.2077 kl=0.5340
+  Step 43: reward=0.1319 loss=1.2895 kl=0.6040
+  Step 44: reward=0.1277 loss=6.5304 kl=-0.4018
+  Step 45: reward=0.1403 loss=1.9096 kl=0.9289
+  Step 46: reward=0.1178 loss=1.6055 kl=0.9785
+  Step 47: reward=0.1315 loss=0.7255 kl=0.3267
+  Step 48: reward=0.1420 loss=1.3932 kl=0.8347
+  Step 49: reward=0.1253 loss=1.2646 kl=-0.3575
+  Step 50: reward=0.1242 loss=1.3684 kl=-0.0222
+  Eval reward=0.6188 toxicity=0.0825
+Epoch 8/10
+  Step 01: reward=0.1205 loss=9.1451 kl=0.1970
+  Step 02: reward=0.1274 loss=1.4951 kl=0.8684
+  Step 03: reward=0.1313 loss=3.0329 kl=0.9620
+  Step 04: reward=0.1280 loss=1.5980 kl=0.5927
+  Step 05: reward=0.1266 loss=2.2027 kl=0.7240
+  Step 06: reward=0.1258 loss=1.6786 kl=1.1871
+  Step 07: reward=0.1263 loss=0.9743 kl=0.1390
+  Step 08: reward=0.1277 loss=0.5365 kl=-0.1430
+  Step 09: reward=0.1254 loss=1.4554 kl=0.2853
+  Step 10: reward=0.1252 loss=0.8435 kl=0.3333
+  Step 11: reward=0.1266 loss=0.7861 kl=-0.1030
+  Step 12: reward=0.1194 loss=1.1263 kl=0.9121
+  Step 13: reward=0.1274 loss=1.5734 kl=1.2509
+  Step 14: reward=0.1124 loss=0.8358 kl=-0.0350
+  Step 15: reward=0.1199 loss=1.1687 kl=0.7708
+  Step 16: reward=0.1287 loss=1.3461 kl=0.4635
+  Step 17: reward=0.1280 loss=1.1018 kl=0.4047
+  Step 18: reward=0.1154 loss=1.2391 kl=0.2734
+  Step 19: reward=0.1294 loss=1.0866 kl=0.6759
+  Step 20: reward=0.1383 loss=5.7440 kl=-0.1729
+  Step 21: reward=0.1320 loss=0.5950 kl=-0.0117
+  Step 22: reward=0.1159 loss=2.0307 kl=0.6643
+  Step 23: reward=0.1245 loss=1.1213 kl=-0.6765
+  Step 24: reward=0.1277 loss=0.7995 kl=0.0369
+  Step 25: reward=0.1262 loss=0.5626 kl=-0.1805
+  Step 26: reward=0.1275 loss=0.8133 kl=0.2904
+  Step 27: reward=0.1263 loss=1.3307 kl=0.7592
+  Step 28: reward=0.1281 loss=0.8501 kl=0.2690
+  Step 29: reward=0.1211 loss=1.7441 kl=1.2300
+  Step 30: reward=0.1318 loss=1.0960 kl=0.6131
+  Step 31: reward=0.1201 loss=2.2563 kl=0.4946
+  Step 32: reward=0.1253 loss=2.4802 kl=0.2049
+  Step 33: reward=0.1165 loss=2.0561 kl=0.8909
+  Step 34: reward=0.1273 loss=1.1852 kl=-0.6697
+  Step 35: reward=0.1291 loss=1.0298 kl=-0.2122
+  Step 36: reward=0.1172 loss=0.7771 kl=-0.1569
+  Step 37: reward=0.1251 loss=1.0987 kl=0.7926
+  Step 38: reward=0.1261 loss=0.9713 kl=-0.3265
+  Step 39: reward=0.1212 loss=1.5870 kl=1.1618
+  Step 40: reward=0.1259 loss=1.2779 kl=0.8942
+  Step 41: reward=0.1229 loss=1.6641 kl=1.0477
+  Step 42: reward=0.1311 loss=0.8271 kl=0.3881
+  Step 43: reward=0.1302 loss=1.9274 kl=-0.8377
+  Step 44: reward=0.1272 loss=1.1053 kl=-0.4025
+  Step 45: reward=0.1302 loss=1.0098 kl=0.1772
+  Step 46: reward=0.1286 loss=1.3926 kl=0.0760
+  Step 47: reward=0.1270 loss=1.2936 kl=0.6061
+  Step 48: reward=0.1254 loss=1.9749 kl=0.6356
+  Step 49: reward=0.1195 loss=0.5926 kl=-0.1052
+  Step 50: reward=0.1301 loss=1.6283 kl=-0.6976
+  Eval reward=0.6198 toxicity=0.0745
+Epoch 9/10
+  Step 01: reward=0.1294 loss=1.9051 kl=1.4757
+  Step 02: reward=0.1260 loss=1.4648 kl=0.9472
+  Step 03: reward=0.1291 loss=0.5208 kl=-0.1516
+  Step 04: reward=0.1259 loss=0.8549 kl=0.5227
+  Step 05: reward=0.1244 loss=0.8309 kl=0.4092
+  Step 06: reward=0.1233 loss=1.7808 kl=1.2118
+  Step 07: reward=0.1288 loss=1.1132 kl=-0.1518
+  Step 08: reward=0.1249 loss=1.5339 kl=1.0980
+  Step 09: reward=0.1218 loss=1.3753 kl=0.7983
+  Step 10: reward=0.1082 loss=2.3650 kl=1.2037
+  Step 11: reward=0.1247 loss=1.0150 kl=0.2858
+  Step 12: reward=0.1458 loss=2.9556 kl=-0.5383
+  Step 13: reward=0.1330 loss=1.1486 kl=0.1644
+  Step 14: reward=0.1241 loss=1.5368 kl=-0.4440
+  Step 15: reward=0.1200 loss=1.7721 kl=1.2524
+  Step 16: reward=0.1305 loss=1.5296 kl=0.6390
+  Step 17: reward=0.1266 loss=1.5352 kl=0.8229
+  Step 18: reward=0.1207 loss=0.4881 kl=-0.0252
+  Step 19: reward=0.1125 loss=0.4773 kl=-0.0797
+  Step 20: reward=0.1340 loss=3.3574 kl=-0.3352
+  Step 21: reward=0.1300 loss=1.3801 kl=0.0959
+  Step 22: reward=0.1252 loss=0.6651 kl=-0.0646
+  Step 23: reward=0.1295 loss=0.8471 kl=0.3341
+  Step 24: reward=0.1237 loss=1.7171 kl=0.4595
+  Step 25: reward=0.1336 loss=3.7288 kl=0.2216
+  Step 26: reward=0.1199 loss=1.6710 kl=1.1206
+  Step 27: reward=0.1415 loss=0.7893 kl=-0.2142
+  Step 28: reward=0.1270 loss=0.7656 kl=0.4873
+  Step 29: reward=0.1300 loss=1.4559 kl=1.1220
+  Step 30: reward=0.1279 loss=10.8472 kl=-0.1330
+  Step 31: reward=0.1283 loss=1.4704 kl=0.9815
+  Step 32: reward=0.1279 loss=2.0866 kl=0.3755
+  Step 33: reward=0.1284 loss=2.3141 kl=1.8321
+  Step 34: reward=0.1311 loss=0.5077 kl=0.1852
+  Step 35: reward=0.1497 loss=0.6110 kl=0.2168
+  Step 36: reward=0.1325 loss=1.2464 kl=0.2910
+  Step 37: reward=0.1172 loss=2.0492 kl=1.5961
+  Step 38: reward=0.1191 loss=1.1814 kl=0.4407
+  Step 39: reward=0.1259 loss=1.9401 kl=0.6536
+  Step 40: reward=0.1296 loss=1.3433 kl=-0.2253
+  Step 41: reward=0.1242 loss=0.8149 kl=0.1943
+  Step 42: reward=0.1198 loss=2.7777 kl=0.6250
+  Step 43: reward=0.1201 loss=0.6311 kl=0.0561
+  Step 44: reward=0.1250 loss=1.2606 kl=0.4071
+  Step 45: reward=0.1222 loss=1.3509 kl=0.3883
+  Step 46: reward=0.1254 loss=1.2881 kl=0.7172
+  Step 47: reward=0.1192 loss=1.1075 kl=0.0870
+  Step 48: reward=0.1210 loss=1.3325 kl=0.6227
+  Step 49: reward=0.1407 loss=2.1912 kl=-0.0884
+  Step 50: reward=0.1246 loss=0.4848 kl=0.1040
+  Eval reward=0.6129 toxicity=0.0891
+Epoch 10/10
+  Step 01: reward=0.1311 loss=0.7445 kl=0.3718
+  Step 02: reward=0.1252 loss=1.0541 kl=-0.2489
+  Step 03: reward=0.1301 loss=7.3815 kl=0.0355
+  Step 04: reward=0.1284 loss=1.6096 kl=1.3602
+  Step 05: reward=0.1275 loss=0.6330 kl=0.2152
+  Step 06: reward=0.1566 loss=1.3150 kl=0.5847
+  Step 07: reward=0.1249 loss=3.4825 kl=0.0201
+  Step 08: reward=0.1267 loss=0.8196 kl=-0.0903
+  Step 09: reward=0.1212 loss=1.5808 kl=1.3808
+  Step 10: reward=0.1102 loss=0.9180 kl=0.3992
+  Step 11: reward=0.1168 loss=0.5772 kl=-0.0359
+  Step 12: reward=0.1281 loss=0.7822 kl=0.3049
+  Step 13: reward=0.1289 loss=0.6004 kl=0.1315
+  Step 14: reward=0.1249 loss=0.8973 kl=0.6623
+  Step 15: reward=0.1289 loss=1.1112 kl=0.5928
+  Step 16: reward=0.1231 loss=11.8182 kl=0.3319
+  Step 17: reward=0.1303 loss=2.1073 kl=0.9154
+  Step 18: reward=0.1211 loss=1.9518 kl=1.2365
+  Step 19: reward=0.1280 loss=1.9007 kl=0.2493
+  Step 20: reward=0.1154 loss=4.2261 kl=0.7968
+  Step 21: reward=0.1215 loss=1.5267 kl=1.1153
+  Step 22: reward=0.1200 loss=0.5284 kl=0.1478
+  Step 23: reward=0.1152 loss=1.5111 kl=1.0605
+  Step 24: reward=0.1272 loss=1.3889 kl=0.7223
+  Step 25: reward=0.1292 loss=1.7451 kl=-0.6797
+  Step 26: reward=0.1217 loss=1.6651 kl=0.8963
+  Step 27: reward=0.1322 loss=2.2212 kl=0.3956
+  Step 28: reward=0.1290 loss=1.2829 kl=0.1639
+  Step 29: reward=0.1289 loss=1.2086 kl=0.6656
+  Step 30: reward=0.1282 loss=2.3244 kl=0.8984
+  Step 31: reward=0.1241 loss=1.4142 kl=0.7263
+  Step 32: reward=0.1225 loss=1.7702 kl=-0.4155
+  Step 33: reward=0.1216 loss=0.8872 kl=-0.2299
+  Step 34: reward=0.1703 loss=1.5985 kl=1.2480
+  Step 35: reward=0.1405 loss=0.7569 kl=-0.1628
+  Step 36: reward=0.1200 loss=1.0704 kl=0.5085
+  Step 37: reward=0.1240 loss=0.7212 kl=0.1714
+  Step 38: reward=0.1238 loss=1.4075 kl=0.9076
+  Step 39: reward=0.1261 loss=1.5603 kl=-0.7749
+  Step 40: reward=0.1219 loss=0.6121 kl=-0.2139
+  Step 41: reward=0.1289 loss=1.5997 kl=0.3239
+  Step 42: reward=0.1290 loss=0.7421 kl=0.2216
+  Step 43: reward=0.1276 loss=1.1459 kl=0.4815
+  Step 44: reward=0.1230 loss=1.8246 kl=1.1251
+  Step 45: reward=0.1177 loss=1.0048 kl=0.6435
+  Step 46: reward=0.1297 loss=2.9436 kl=-0.0625
+  Step 47: reward=0.1238 loss=0.6558 kl=-0.0580
+  Step 48: reward=0.1276 loss=0.7383 kl=0.1300
+  Step 49: reward=0.1152 loss=1.2519 kl=-0.4958
+  Step 50: reward=0.1425 loss=1.5062 kl=0.2890
+  Eval reward=0.6162 toxicity=0.0862
+RLHF PPO policy saved to RL/full_run_jonly/mvp/ppo_policy
+RLHF model saved to RL/full_run_jonly/mvp/final_model
+Running inference over held-out set...
+Generating test predictions:   0%|          | 0/62 [00:00<?, ?it/s]Generating test predictions:   2%|▏         | 1/62 [00:03<03:50,  3.78s/it]Generating test predictions:   3%|▎         | 2/62 [00:05<02:45,  2.76s/it]Generating test predictions:   5%|▍         | 3/62 [00:08<02:33,  2.61s/it]Generating test predictions:   6%|▋         | 4/62 [00:11<02:44,  2.84s/it]Generating test predictions:   8%|▊         | 5/62 [00:13<02:31,  2.67s/it]Generating test predictions:  10%|▉         | 6/62 [00:16<02:31,  2.70s/it]Generating test predictions:  11%|█▏        | 7/62 [00:19<02:27,  2.69s/it]Generating test predictions:  13%|█▎        | 8/62 [00:21<02:23,  2.66s/it]Generating test predictions:  15%|█▍        | 9/62 [00:24<02:13,  2.51s/it]Generating test predictions:  16%|█▌        | 10/62 [00:26<02:07,  2.46s/it]Generating test predictions:  18%|█▊        | 11/62 [00:28<02:07,  2.49s/it]Generating test predictions:  19%|█▉        | 12/62 [00:31<02:10,  2.62s/it]Generating test predictions:  21%|██        | 13/62 [00:34<02:04,  2.53s/it]Generating test predictions:  23%|██▎       | 14/62 [00:36<01:54,  2.38s/it]Generating test predictions:  24%|██▍       | 15/62 [00:38<01:44,  2.23s/it]Generating test predictions:  26%|██▌       | 16/62 [00:40<01:44,  2.27s/it]Generating test predictions:  27%|██▋       | 17/62 [00:42<01:38,  2.19s/it]Generating test predictions:  29%|██▉       | 18/62 [00:44<01:33,  2.13s/it]Generating test predictions:  31%|███       | 19/62 [00:46<01:27,  2.03s/it]Generating test predictions:  32%|███▏      | 20/62 [00:48<01:27,  2.08s/it]Generating test predictions:  34%|███▍      | 21/62 [00:50<01:23,  2.04s/it]Generating test predictions:  35%|███▌      | 22/62 [00:52<01:23,  2.10s/it]Generating test predictions:  37%|███▋      | 23/62 [00:54<01:21,  2.10s/it]Generating test predictions:  39%|███▊      | 24/62 [00:57<01:22,  2.18s/it]Generating test predictions:  40%|████      | 25/62 [00:59<01:19,  2.15s/it]Generating test predictions:  42%|████▏     | 26/62 [01:01<01:19,  2.21s/it]Generating test predictions:  44%|████▎     | 27/62 [01:03<01:19,  2.26s/it]Generating test predictions:  45%|████▌     | 28/62 [01:06<01:17,  2.28s/it]Generating test predictions:  47%|████▋     | 29/62 [01:08<01:14,  2.27s/it]Generating test predictions:  48%|████▊     | 30/62 [01:10<01:11,  2.23s/it]Generating test predictions:  50%|█████     | 31/62 [01:12<01:08,  2.22s/it]Generating test predictions:  52%|█████▏    | 32/62 [01:15<01:07,  2.24s/it]Generating test predictions:  53%|█████▎    | 33/62 [01:17<01:05,  2.26s/it]Generating test predictions:  55%|█████▍    | 34/62 [01:19<01:01,  2.18s/it]Generating test predictions:  56%|█████▋    | 35/62 [01:21<01:01,  2.30s/it]Generating test predictions:  58%|█████▊    | 36/62 [01:24<01:02,  2.41s/it]Generating test predictions:  60%|█████▉    | 37/62 [01:26<00:58,  2.33s/it]Generating test predictions:  61%|██████▏   | 38/62 [01:28<00:54,  2.29s/it]Generating test predictions:  63%|██████▎   | 39/62 [01:30<00:50,  2.19s/it]Generating test predictions:  65%|██████▍   | 40/62 [01:33<00:52,  2.37s/it]Generating test predictions:  66%|██████▌   | 41/62 [01:35<00:47,  2.28s/it]Generating test predictions:  68%|██████▊   | 42/62 [01:37<00:45,  2.26s/it]Generating test predictions:  69%|██████▉   | 43/62 [01:40<00:43,  2.29s/it]Generating test predictions:  71%|███████   | 44/62 [01:42<00:41,  2.28s/it]Generating test predictions:  73%|███████▎  | 45/62 [01:44<00:38,  2.26s/it]Generating test predictions:  74%|███████▍  | 46/62 [01:47<00:36,  2.26s/it]Generating test predictions:  76%|███████▌  | 47/62 [01:48<00:31,  2.08s/it]Generating test predictions:  77%|███████▋  | 48/62 [01:50<00:29,  2.08s/it]Generating test predictions:  79%|███████▉  | 49/62 [01:52<00:26,  2.04s/it]Generating test predictions:  81%|████████  | 50/62 [01:54<00:24,  2.05s/it]Generating test predictions:  82%|████████▏ | 51/62 [01:57<00:23,  2.18s/it]Generating test predictions:  84%|████████▍ | 52/62 [02:00<00:23,  2.39s/it]Generating test predictions:  85%|████████▌ | 53/62 [02:02<00:21,  2.44s/it]Generating test predictions:  87%|████████▋ | 54/62 [02:05<00:19,  2.38s/it]Generating test predictions:  89%|████████▊ | 55/62 [02:07<00:16,  2.31s/it]Generating test predictions:  90%|█████████ | 56/62 [02:09<00:14,  2.37s/it]Generating test predictions:  92%|█████████▏| 57/62 [02:12<00:11,  2.39s/it]Generating test predictions:  94%|█████████▎| 58/62 [02:14<00:09,  2.31s/it]Generating test predictions:  95%|█████████▌| 59/62 [02:16<00:06,  2.28s/it]Generating test predictions:  97%|█████████▋| 60/62 [02:18<00:04,  2.20s/it]Generating test predictions:  98%|█████████▊| 61/62 [02:20<00:02,  2.20s/it]Generating test predictions: 100%|██████████| 62/62 [02:24<00:00,  2.78s/it]                                                                            Some weights of the model checkpoint at SkolkovoInstitute/roberta_toxicity_classifier were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at textattack/roberta-base-CoLA were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+Saved predictions to RL/full_run_jonly/mvp/test_results.tsv
+Computing ParaDetox metrics...
+Loaded 1973 examples with model outputs.
+Using device: cpu
+
+Computing BLEU...
+Computing Style Accuracy (STA)...
+Computing Content Preservation (SIM)...
+Batches:   0%|          | 0/31 [00:00<?, ?it/s]Batches:   3%|▎         | 1/31 [00:01<00:45,  1.51s/it]Batches:   6%|▋         | 2/31 [00:01<00:20,  1.40it/s]Batches:  10%|▉         | 3/31 [00:01<00:12,  2.16it/s]Batches:  13%|█▎        | 4/31 [00:01<00:09,  2.90it/s]Batches:  16%|█▌        | 5/31 [00:02<00:07,  3.69it/s]Batches:  19%|█▉        | 6/31 [00:02<00:05,  4.46it/s]Batches:  26%|██▌       | 8/31 [00:02<00:03,  6.96it/s]Batches:  29%|██▉       | 9/31 [00:02<00:03,  5.55it/s]Batches:  35%|███▌      | 11/31 [00:02<00:02,  7.78it/s]Batches:  42%|████▏     | 13/31 [00:03<00:02,  7.00it/s]Batches:  48%|████▊     | 15/31 [00:03<00:03,  5.30it/s]Batches:  55%|█████▍    | 17/31 [00:03<00:02,  6.95it/s]Batches:  61%|██████▏   | 19/31 [00:04<00:01,  6.05it/s]Batches:  65%|██████▍   | 20/31 [00:04<00:01,  6.15it/s]Batches:  74%|███████▍  | 23/31 [00:04<00:01,  6.82it/s]Batches:  77%|███████▋  | 24/31 [00:05<00:01,  5.84it/s]Batches:  84%|████████▍ | 26/31 [00:05<00:00,  6.70it/s]Batches:  94%|█████████▎| 29/31 [00:05<00:00,  9.61it/s]Batches: 100%|██████████| 31/31 [00:05<00:00, 10.57it/s]Batches: 100%|██████████| 31/31 [00:05<00:00,  5.64it/s]
+Batches:   0%|          | 0/31 [00:00<?, ?it/s]Batches:   6%|▋         | 2/31 [00:00<00:02, 14.33it/s]Batches:  13%|█▎        | 4/31 [00:00<00:01, 13.82it/s]Batches:  19%|█▉        | 6/31 [00:00<00:01, 14.84it/s]Batches:  26%|██▌       | 8/31 [00:00<00:01, 13.20it/s]Batches:  32%|███▏      | 10/31 [00:00<00:01, 13.96it/s]Batches:  42%|████▏     | 13/31 [00:00<00:01, 16.37it/s]Batches:  52%|█████▏    | 16/31 [00:00<00:00, 18.09it/s]Batches:  61%|██████▏   | 19/31 [00:01<00:00, 19.61it/s]Batches:  71%|███████   | 22/31 [00:01<00:00, 20.61it/s]Batches:  81%|████████  | 25/31 [00:01<00:00, 16.80it/s]Batches:  90%|█████████ | 28/31 [00:01<00:00, 18.93it/s]Batches: 100%|██████████| 31/31 [00:01<00:00, 18.66it/s]Batches: 100%|██████████| 31/31 [00:01<00:00, 17.36it/s]
+Computing Fluency (FL)...
+
+=== ParaDetox-style Metrics ===
+BLEU:  57.11
+STA :  0.948
+SIM :  0.854
+FL  :  0.770
+J   :  0.623
+Metrics written to RL/full_run_jonly/mvp/metrics.txt
