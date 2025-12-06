@@ -1,0 +1,183 @@
+{
+  "dataset_path": "TRAIN/paradetox.tsv",
+  "source_column": "toxic",
+  "reference_column": "neutral1",
+  "max_samples": 100,
+  "sample_strategy": "random",
+  "output_dir": "RERANK/outputs/rl_only",
+  "generation": {
+    "device": "auto",
+    "batch_size": 4,
+    "max_input_length": 128,
+    "max_new_tokens": 72,
+    "num_beams": 4,
+    "do_sample": true,
+    "top_p": 0.9,
+    "temperature": 1.08,
+    "num_return_sequences": 2,
+    "early_stopping": true,
+    "length_penalty": 1.0
+  },
+  "models": [
+    {
+      "name": "bart-base-rlhf-jbleu",
+      "path": "RL/full_run/bart-base/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.9,
+        "temperature": 1.12,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "bart-large-rlhf-jbleu",
+      "path": "RL/full_run/bart-large/final_model",
+      "batch_size": 2,
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.9,
+        "temperature": 1.12,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "bart-paraphrase-rlhf-jbleu",
+      "path": "RL/full_run/bart-paraphrase/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.9,
+        "temperature": 1.12,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "blenderbot-rlhf-jbleu",
+      "path": "RL/full_run/blenderbot/final_model",
+      "batch_size": 2,
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.9,
+        "temperature": 1.12,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "mvp-rlhf-jbleu",
+      "path": "RL/full_run/mvp/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.9,
+        "temperature": 1.12,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "t5-small-rlhf-jbleu",
+      "path": "RL/full_run/t5-small/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.9,
+        "temperature": 1.12,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "bart-base-rlhf-jonly",
+      "path": "RL/full_run_jonly/bart-base/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.92,
+        "temperature": 1.18,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "bart-large-rlhf-jonly",
+      "path": "RL/full_run_jonly/bart-large/final_model",
+      "batch_size": 2,
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.92,
+        "temperature": 1.18,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "bart-paraphrase-rlhf-jonly",
+      "path": "RL/full_run_jonly/bart-paraphrase/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.92,
+        "temperature": 1.18,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "blenderbot-rlhf-jonly",
+      "path": "RL/full_run_jonly/blenderbot/final_model",
+      "batch_size": 2,
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.92,
+        "temperature": 1.18,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "mvp-rlhf-jonly",
+      "path": "RL/full_run_jonly/mvp/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.92,
+        "temperature": 1.18,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "prophetnet-large-uncased-rlhf-jonly",
+      "path": "RL/full_run_jonly/prophetnet-large-uncased/final_model",
+      "batch_size": 2,
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.92,
+        "temperature": 1.18,
+        "num_return_sequences": 4
+      }
+    },
+    {
+      "name": "t5-small-rlhf-jonly",
+      "path": "RL/full_run_jonly/t5-small/final_model",
+      "generation": {
+        "do_sample": true,
+        "num_beams": 4,
+        "top_p": 0.92,
+        "temperature": 1.18,
+        "num_return_sequences": 4
+      }
+    }
+  ],
+  "scoring": {
+    "device": "auto",
+    "batch_size": 32,
+    "toxicity_threshold": 0.5,
+    "objective_weights": {
+      "J": 1.0,
+      "BLEU_NORM": 0.25,
+      "SIM": 0.1,
+      "FL_PROB": 0.2
+    }
+  },
+  "sample_seed": 42
+}

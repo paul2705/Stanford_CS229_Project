@@ -1,0 +1,62 @@
+{
+  "dataset_path": "TRAIN/paradetox.tsv",
+  "source_column": "toxic",
+  "reference_column": "neutral1",
+  "max_samples": 200,
+  "output_dir": "RERANK/outputs/example_run",
+  "generation": {
+    "device": "auto",
+    "batch_size": 4,
+    "max_input_length": 128,
+    "max_new_tokens": 72,
+    "num_beams": 4,
+    "do_sample": true,
+    "top_p": 0.92,
+    "temperature": 1.05,
+    "num_return_sequences": 2
+  },
+  "models": [
+    {
+      "name": "bart-base-sft",
+      "path": "TRAIN/bart-base/final_model",
+      "tokenizer": "facebook/bart-base"
+    },
+    {
+      "name": "bart-base-rlhf-jonly",
+      "path": "RL/full_run_jonly/bart-base/final_model",
+      "tokenizer": "facebook/bart-base",
+      "generation": {
+        "num_return_sequences": 3,
+        "temperature": 1.1
+      }
+    },
+    {
+      "name": "bart-base-rlhf-jbleu",
+      "path": "RL/full_run/bart-base/final_model",
+      "tokenizer": "facebook/bart-base",
+      "generation": {
+        "num_return_sequences": 3,
+        "temperature": 1.05
+      }
+    },
+    {
+      "name": "bart-large-rlhf-jbleu",
+      "path": "RL/full_run/bart-large/final_model",
+      "tokenizer": "facebook/bart-large",
+      "batch_size": 2,
+      "generation": {
+        "num_beams": 5,
+        "num_return_sequences": 2
+      }
+    }
+  ],
+  "scoring": {
+    "device": "auto",
+    "batch_size": 24,
+    "toxicity_threshold": 0.5,
+    "objective_weights": {
+      "J": 1.0,
+      "BLEU_NORM": 0.25
+    }
+  }
+}
