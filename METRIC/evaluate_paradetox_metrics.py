@@ -24,12 +24,6 @@ def batch_iter(lst, batch_size):
 # 1. BLEU
 # -----------------------------
 def compute_bleu(references, hypotheses):
-    """
-    references: list[str]  – human detoxified sentences
-    hypotheses: list[str]  – model outputs
-
-    Returns BLEU as a percentage (0–100), same scale as sacrebleu.
-    """
     bleu = sacrebleu.corpus_bleu(hypotheses, [references])
     return bleu.score  # paper reports BLEU in 0–100
 
@@ -45,12 +39,6 @@ def compute_style_accuracy(
     device="cpu",
     threshold=0.5,
 ):
-    """
-    Uses SkolkovoInstitute/roberta_toxicity_classifier
-    (same as in the ParaDetox README).
-
-    STA = percentage of sentences classified as NON-toxic.
-    """
     tox_model.eval()
     tox_model.to(device)
 
@@ -87,13 +75,6 @@ def compute_similarity(
     outputs,
     sim_model,
 ):
-    """
-    Uses Wieting-style paraphrastic embeddings via
-    a sentence-transformers model (e.g. jwieting/paraphrastic_test).
-
-    SIM = mean cosine similarity(source_emb, output_emb).
-    """
-    # encode with normalization -> cosine is just dot product
     emb_src = sim_model.encode(
         sources,
         batch_size=64,
@@ -124,12 +105,6 @@ def compute_fluency(
     cola_model,
     device="cpu",
 ):
-    """
-    Uses textattack/roberta-base-CoLA (RoBERTa model
-    fine-tuned on CoLA acceptability).
-
-    FL = % sentences predicted as 'acceptable' (label 1).
-    """
     cola_model.eval()
     cola_model.to(device)
 
@@ -160,15 +135,8 @@ def compute_fluency(
 # 5. Joint metric J
 # -----------------------------
 def compute_joint(sta, sim, fl):
-    """
-    J = STA * SIM * FL
-    """
     return float(sta * sim * fl)
 
-
-# -----------------------------
-# 6. Putting it all together
-# -----------------------------
 def evaluate_paradetox(
     tsv_path,
     output_col="model_output",
@@ -177,7 +145,6 @@ def evaluate_paradetox(
 ):
     df = pd.read_csv(tsv_path, sep="\t")
 
-    # Filter rows where we have all three texts
     df = df.dropna(subset=[source_col, reference_col, output_col])
 
     sources = df[source_col].tolist()
@@ -189,25 +156,17 @@ def evaluate_paradetox(
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Using device: {device}")
 
-    # 6.1 Load models (all public)
-    # Toxicity classifier – same as ParaDetox paper
     TOX_MODEL_NAME = "SkolkovoInstitute/roberta_toxicity_classifier"
     tox_tokenizer = AutoTokenizer.from_pretrained(TOX_MODEL_NAME)
     tox_model = AutoModelForSequenceClassification.from_pretrained(TOX_MODEL_NAME)
 
-    # CoLA acceptability classifier
     COLA_MODEL_NAME = "textattack/roberta-base-CoLA"
     cola_tokenizer = AutoTokenizer.from_pretrained(COLA_MODEL_NAME)
     cola_model = AutoModelForSequenceClassification.from_pretrained(COLA_MODEL_NAME)
 
-    # Wieting-style paraphrastic sentence embeddings
-    # (any strong paraphrastic model works; this one is close in spirit)
-    # SIM_MODEL_NAME = "jwieting/paraphrastic_test"
-    # sim_model = SentenceTransformer(SIM_MODEL_NAME)
     SIM_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
     sim_model = SentenceTransformer(SIM_MODEL_NAME)
 
-    # 6.2 Compute metrics
     print("\nComputing BLEU...")
     bleu = compute_bleu(references, outputs)  # 0–100
 
@@ -222,9 +181,8 @@ def evaluate_paradetox(
 
     j = compute_joint(sta, sim, fl)
 
-    # 6.3 Print results in same style as paper
     print("\n=== ParaDetox-style Metrics ===")
-    print(f"BLEU: {bleu:6.2f}")            # paper reports BLEU in 0–100
+    print(f"BLEU: {bleu:6.2f}")           
     print(f"STA : {sta:6.3f}")
     print(f"SIM : {sim:6.3f}")
     print(f"FL  : {fl:6.3f}")
